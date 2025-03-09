@@ -1,0 +1,45 @@
+# 服务配置
+server:
+  port: 8080
+
+# Spring配置
+spring:
+  application:
+    name: kami
+  jackson:
+    # web返回值为null时不显示字段
+    default-property-inclusion: non_null
+    # 默认时区
+    time-zone: GMT+8
+  # 多语言配置
+  messages:
+    # 语言资源文件目录
+    basename: i18n/messages
+    # 资源文件编码
+    encoding: utf-8
+    # 找不到文件时是否回退到系统默认
+    fallback-to-system-locale: true
+    # 资源缓存时间，单位秒
+    cache-duration: 3600
+  # 数据库初始化
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:/db/h2/schema.sql
+      data-locations: classpath:/db/h2/data.sql
+  # h2数据库配置
+  h2:
+    console:
+      enabled: true
+      path: /sys/h2
+      settings:
+        trace: false
+        web-allow-others: false
+
+# 持久化框架配置
+mybatis-flex:
+  datasource:
+    sys:
+      url: jdbc:h2:file:./.data/sys
+      username: root
+      password: root

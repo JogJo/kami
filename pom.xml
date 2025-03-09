@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 【统一依赖管理】 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.3</version>
+        <relativePath/>
+    </parent>
+
+    <!-- 【项目信息】 -->
+    <groupId>cn.jogjo</groupId>
+    <artifactId>kami</artifactId>
+    <version>1.0.250308.1</version>
+    <name>${project.artifactId}</name>
+    <description>Kami神之架构，适用于简单项目，整体结构清晰</description>
+    <url>https://github.com/JogJo/kami</url>
+
+    <!-- 【项目配置】 -->
+    <properties>
+        <java.version>21</java.version>
+    </properties>
+
+    <!-- 【依赖相关配置】 maven仓库官网：https://mvnrepository.com -->
+    <dependencies>
+        <!-- [spring-网络依赖] 官网：https://spring.io -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- [spring-测试依赖] -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- [spring-数据源自动装配] 默认连接池HikariCP -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!-- [数据库连接池] PS：不想用spring-boot-starter-jdbc可以独立引入连接池 -->
+        <!--<dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+        </dependency>-->
+
+        <!-- [h2数据库] 官网：https://h2database.com -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- [持久化框架] 官网：https://mybatis-flex.com -->
+        <dependency>
+            <groupId>com.mybatis-flex</groupId>
+            <artifactId>mybatis-flex-spring-boot3-starter</artifactId>
+            <version>1.10.8</version>
+        </dependency>
+
+        <!-- [代码简化构建工具] 官网：https://projectlombok.org -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- [spring-开发工具] 静态资源热重启，修改静态资源自动编译，前后端分离时不需要，idea可以处理后端代码的热重启 -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>-->
+    </dependencies>
+
+    <!-- 【构建相关配置】 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
