@@ -1,6 +1,6 @@
 package cn.jogjo.kami.pow;
 
-import cn.jogjo.kami.res.base.ActResult;
+import cn.jogjo.kami.res.norm.ActResult;
 
 /**
  * 系统-能力

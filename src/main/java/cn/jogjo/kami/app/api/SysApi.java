@@ -1,7 +1,7 @@
 package cn.jogjo.kami.app.api;
 
 import cn.jogjo.kami.pow.SysPow;
-import cn.jogjo.kami.res.base.ActResult;
+import cn.jogjo.kami.res.norm.ActResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -2,7 +2,7 @@ package cn.jogjo.kami.pro;
 
 import cn.jogjo.kami.KamiApplication;
 import cn.jogjo.kami.pow.SysPow;
-import cn.jogjo.kami.res.base.ActResult;
+import cn.jogjo.kami.res.norm.ActResult;
 import cn.jogjo.kami.res.config.SysExitCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;

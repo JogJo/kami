@@ -21,7 +21,7 @@
 
 遇见Kami，是神的旨意
 
-![Kami](./doc/img/kami1.jpg)
+![Kami](./public/doc/img/kami1.jpg)
 
  </div>
 
@@ -75,7 +75,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 **我们开始改造吧！**
 
-![gan](doc/img/emoji/gan.png)
+![gan](./public/doc/img/emoji/gan.png)
 
 ## 前端大革命
 什么是前端？其实网页端、手机端、桌面端、小程序，我们所能看到的，都可以看作前端。
@@ -86,7 +86,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 前端完全可以作为一个独立项目，脱离后端，成为新的kami！
 
-![zaoshen](doc/img/emoji/zaoshen.png)
+![zaoshen](./public/doc/img/emoji/zaoshen.png)
 
 于是前端就可以分化成很多个独立的kami
 
@@ -113,7 +113,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 就会得到这样的调用链：
 > api > pow > mapper > 数据库
 
-![nani](./doc/img/emoji/nani.png) 纳尼！如此精悍！请往下继续看看是怎么个回事
+![nani](./public/doc/img/emoji/nani.png) 纳尼！如此精悍！请往下继续看看是怎么个回事
 
 ### 梳理
 - 概念的变更
@@ -168,17 +168,26 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
       - UserPow.java 【用户能力接口】
     - pro 【创造层】
       - UserPowPro.java 【用户能力创造实现】
-    - repo 【仓储层】
-      - mapper 【持久化映射器】
-        - UserMapper.java 【用户持久化映射】
-      - po 【持久化对象】
-        - UserPO.java 【用户持久化对象】
     - res 【资源层】
-      - base 【通用基础】
-        - ActCode.java 【行为响应码】
-        - ActResult.java 【行为响应结果】
       - config 【配置】
         - SysConfig.java 【系统配置】
+      - norm 【标准】 常量、枚举、统一规则
+        - ActCode.java 【行为响应码】
+        - ActResult.java 【行为响应结果】
+      - oper 【操作员】 包含各种处理handler、processor、runner、filter、Interceptor
+        - aop
+          - PermissionCheck.java 【权限检测切片】
+        - WebFilter.java 【网络过滤器】
+        - WebInterceptor.java 【网络拦截器】
+      - repo 【仓储】
+        - cache 【缓存】
+          - SysCache.java 【系统缓存】
+        - mapper 【持久化映射器】
+          - UserMapper.java 【用户持久化映射】
+        - po 【持久化对象】
+          - UserPO.java 【用户持久化对象】
+      - task 【任务】 任务池、定时任务
+        - SysTask.java
       - util 【工具】
         - I18nUtil.java 【国际化工具】
     - KamiApplication.java 【应用启动类】
@@ -208,7 +217,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 我会来到你身边！
 
-![Kami](./doc/img/kami2.jpg)
+![Kami](./public/doc/img/kami2.jpg)
 
 <div align="center">层层递进，清晰简单，手搓小项目首选架构！</div>
 
@@ -219,7 +228,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 <table>
   <tr>
-    <td><img src="./doc/img/armory/jogjo.jpg" width="77px" height="77px" style="border-radius: 50%;"/></td>
+    <td><img src="./public/doc/img/armory/jogjo.jpg" width="77px" height="77px" style="border-radius: 50%;"/></td>
   </tr>
   <tr>
     <td align="center"><a href="https://jogjo.cn" title="这是JogJo的博客，走过路过不要错过哟~" target="_blank">JogJo</a></td>
@@ -241,14 +250,15 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 <table>
   <tr>
-    <td><img src="./doc/img/armory/jogjo.jpg" width="77px" height="77px" style="border-radius: 50%;"/></td>
+    <td><img src="./public/doc/img/armory/jogjo.jpg" width="77px" height="77px" style="border-radius: 50%;"/></td>
   </tr>
   <tr>
     <td align="center"><a href="https://jogjo.cn" title="这是JogJo的博客，走过路过不要错过哟~" target="_blank">JogJo</a></td>
   </tr>
 </table>
 
-如果觉得kami架构很符合你的使用需求和体验，欢迎留下你的项目链接。
+# 互动交流
+如果觉得kami架构符合你的使用需求和体验，请尽情使用！也欢迎留下你的项目链接，我们一起交流。
 
 格式：
 > 名称：JogJo
@@ -268,7 +278,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 # 请作者喝咖啡
 
 ---
-![JogJo](./doc/img/pay.jpg)
+![JogJo](./public/doc/img/pay.jpg)
 
 <div align="center" style="color: rgb(234,94,67);text-align: center">
 *你随手赞助的咖啡会让人兴奋得睡不着觉，一拍大腿！又出一个新功能！*

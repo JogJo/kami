@@ -1,6 +1,6 @@
 package cn.jogjo.kami.res.config;
 
-import cn.jogjo.kami.res.base.ActCode;
+import cn.jogjo.kami.res.norm.ActCode;
 import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package cn.jogjo.kami.res.base;
+package cn.jogjo.kami.res.norm;
 
 import lombok.Data;
 
