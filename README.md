@@ -138,8 +138,6 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 > pro 创造层
 
-> repo 仓储层
-
 > res 资源层
 
 ### 整体结构
@@ -147,11 +145,14 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 - .data 【应用数据存放目录】仅用于开发，生产环境需要修改目录
 - .logs 【应用日志文件目录】
-- doc 【项目文档】
+- bin 【打包脚本】 启动、停止、初始化脚本
+- public 【公共文件】
+  - doc 【项目文档】
 - src.main 【源代码目录】
   - java 【代码】
   - resource 【资源配置目录】
 - .gitignore 【Git忽略文件配置】
+- assembly.xml 【自定义打包构建】
 - LICENSE 【开源协议】
 - pom.xml 【Maven配置】
 - README.md 【介绍文档】

@@ -68,6 +68,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <!-- [spring-开发工具] 静态资源热重启，修改静态资源自动编译，前后端分离时不需要，idea可以处理后端代码的热重启 -->
@@ -80,10 +81,55 @@
 
     <!-- 【构建相关配置】 -->
     <build>
+        <!-- 打包后jar名称 -->
+        <finalName>${project.artifactId}</finalName>
         <plugins>
-            <plugin>
+            <!-- [Spring打包插件] 如果只希望打成一个jar包，使用这个插件即可 -->
+            <!--<plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>-->
+
+            <!-- [Maven打包插件] 如果需要打散包，并需要将一些资源重新分类，使用Maven的两个打包插件定制（推荐做法） -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <!-- MANIFEST.MF 中 Class-Path 加入前缀 -->
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <!-- jar包不包含唯一版本标识 -->
+                            <useUniqueVersions>false</useUniqueVersions>
+                            <!-- 指定入口类 -->
+                            <mainClass>cn.jogjo.kami.KamiApplication</mainClass>
+                        </manifest>
+                    </archive>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
+                </configuration>
+            </plugin>
+
+            <!-- [Maven自定义打包构建插件] -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <!-- 是否将构建标识附加到打包文件名后 -->
+                    <appendAssemblyId>true</appendAssemblyId>
+                    <descriptors>
+                        <!-- 项目所在目录配置文件的 assembly.xml文件 -->
+                        <descriptor>assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>${project.version}</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
