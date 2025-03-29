@@ -21,7 +21,7 @@
 
 遇见Kami，是神的旨意
 
-![Kami](./public/doc/img/kami1.jpg)
+![Kami](./dev/doc/img/kami1.jpg)
 
  </div>
 
@@ -75,7 +75,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 **我们开始改造吧！**
 
-![gan](./public/doc/img/emoji/gan.png)
+![gan](./dev/doc/img/emoji/gan.png)
 
 ## 前端大革命
 什么是前端？其实网页端、手机端、桌面端、小程序，我们所能看到的，都可以看作前端。
@@ -86,7 +86,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 前端完全可以作为一个独立项目，脱离后端，成为新的kami！
 
-![zaoshen](./public/doc/img/emoji/zaoshen.png)
+![zaoshen](./dev/doc/img/emoji/zaoshen.png)
 
 于是前端就可以分化成很多个独立的kami
 
@@ -113,7 +113,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 就会得到这样的调用链：
 > api > pow > mapper > 数据库
 
-![nani](./public/doc/img/emoji/nani.png) 纳尼！如此精悍！请往下继续看看是怎么个回事
+![nani](./dev/doc/img/emoji/nani.png) 纳尼！如此精悍！请往下继续看看是怎么个回事
 
 ### 梳理
 - 概念的变更
@@ -146,12 +146,13 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 - .data 【应用数据存放目录】仅用于开发，生产环境需要修改目录
 - .logs 【应用日志文件目录】
 - bin 【打包脚本】 启动、停止、初始化脚本
-- public 【公共文件】
+- dev 【开发文件】
   - doc 【项目文档】
 - src.main 【源代码目录】
   - java 【代码】
   - resource 【资源配置目录】
 - .gitignore 【Git忽略文件配置】
+- archetype.properties 【Maven骨架构建配置】
 - assembly.xml 【自定义打包构建】
 - LICENSE 【开源协议】
 - pom.xml 【Maven配置】
@@ -218,7 +219,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 我会来到你身边！
 
-![Kami](./public/doc/img/kami2.jpg)
+![Kami](./dev/doc/img/kami2.jpg)
 
 <div align="center">层层递进，清晰简单，手搓小项目首选架构！</div>
 
@@ -229,7 +230,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 <table>
   <tr>
-    <td><img src="./public/doc/img/armory/jogjo.jpg" width="77px" height="77px" style="border-radius: 50%;"/></td>
+    <td><img src="./dev/doc/img/armory/jogjo.jpg" width="77px" height="77px" style="border-radius: 50%;"/></td>
   </tr>
   <tr>
     <td align="center"><a href="https://jogjo.cn" title="这是JogJo的博客，走过路过不要错过哟~" target="_blank">JogJo</a></td>
@@ -251,7 +252,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 
 <table>
   <tr>
-    <td><img src="./public/doc/img/armory/jogjo.jpg" width="77px" height="77px" style="border-radius: 50%;"/></td>
+    <td><img src="./dev/doc/img/armory/jogjo.jpg" width="77px" height="77px" style="border-radius: 50%;"/></td>
   </tr>
   <tr>
     <td align="center"><a href="https://jogjo.cn" title="这是JogJo的博客，走过路过不要错过哟~" target="_blank">JogJo</a></td>
@@ -279,7 +280,7 @@ kami 神の架构 ，是mvc架构的改进版，特点是整体结构清晰，�
 # 请作者喝咖啡
 
 ---
-![JogJo](./public/doc/img/pay.jpg)
+![JogJo](./dev/doc/img/pay.jpg)
 
 <div align="center" style="color: rgb(234,94,67);text-align: center">
 *你随手赞助的咖啡会让人兴奋得睡不着觉，一拍大腿！又出一个新功能！*
